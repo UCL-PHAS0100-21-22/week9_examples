@@ -1,10 +1,2 @@
 *.o*
 *.e*
-data_region_managed
-data_region_unmanaged
-no_data_region
-heat_flow_openmp
-heat_flow_multicore
-heat_flow
-saxpy
-saxpy_multicore
