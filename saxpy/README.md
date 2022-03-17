@@ -6,7 +6,7 @@ module load compilers/nvidia/hpc-sdk/22.2
 
 To compile:
 ```
-nvc++ -acc -ta=tesla -Minfo=accel -o saxpy main.cpp
+nvc++ -acc -ta=tesla:managed -Minfo=accel -o saxpy main.cpp
 ```
 
-Replace `tesla` with `multicore` for CPU.
+Replace `tesla:managed` with `multicore` for CPU.
