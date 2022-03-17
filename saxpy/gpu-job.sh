@@ -22,4 +22,6 @@ module unload compilers mpi
 module load compilers/nvidia/hpc-sdk/22.2
 
 # Run the application - the line below is just a random example.
-./saxpy
+PGI_ACC_TIME=1 ./saxpy
+
+./saxpy_multicore
