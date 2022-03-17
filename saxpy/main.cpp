@@ -24,7 +24,7 @@ int main() {
 
 #pragma acc parallel loop
     for(int i=0; i<N; ++i) {
-        result[i] = x[i] + a*y[i];
+        result[i] = a*x[i] + y[i];
     }
 
     auto stop = high_resolution_clock::now();
@@ -32,6 +32,10 @@ int main() {
 
     std::cout << result[0] << ", " << x[0] + a*y[0] << std::endl;
     std::cout << "Time for " << N << " iterations: " << duration.count() << std::endl;
+
+    delete [] result;
+    delete [] x;
+    delete [] y;
 
     return 0;
 }
