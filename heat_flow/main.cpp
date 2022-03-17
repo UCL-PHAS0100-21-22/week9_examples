@@ -58,7 +58,7 @@ int main() {
             }
         }
 
-        if(iterations % 100 == 0) {
+        if(iterations % 300 == 0) {
             track_progress(iterations, temperature);
         }
 
