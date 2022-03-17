@@ -15,12 +15,12 @@ int main() {
     float *x = new float[N];
     float *y = new float[N];
 
+    auto start = high_resolution_clock::now();
+
     for(int i=0; i<N; ++i) {
         x[i] = 2.0f;
         y[i] = 1.0f;
     }
-
-    auto start = high_resolution_clock::now();
 
     for(int i=0; i<N; ++i) {
         result[i] = a*x[i] + y[i];
@@ -29,7 +29,7 @@ int main() {
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
 
-    std::cout << result[0] << ", " << x[0] + a*y[0] << std::endl;
+    std::cout << result[0] << std::endl;
     std::cout << "Time for " << N << " iterations: " << duration.count() << std::endl;
 
     delete [] result;
