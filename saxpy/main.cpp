@@ -22,7 +22,6 @@ int main() {
 
     auto start = high_resolution_clock::now();
 
-#pragma acc parallel loop
     for(int i=0; i<N; ++i) {
         result[i] = a*x[i] + y[i];
     }
